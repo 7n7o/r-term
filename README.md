@@ -1,10 +1,20 @@
 # r-term
 
-# Building the project.
-
-Install rojo 7+ and run `rojo build -o CLI.rbxm`
-
 # Running the project.
+
+## From GitHub
+
+```lua
+local rbxmSuite = loadstring(game:HttpGetAsync("https://github.com/richie0866/rbxm-suite/releases/latest/download/rbxm-suite.lua"))()
+
+local path = rbxmSuite.download("7n7o/r-term@latest", "CLI.rbxm")
+-- Download the latest RBXM
+rbxmSuite.launch(path, {
+    runscripts=true,
+    deferred = true,
+    nocirculardeps = true
+})
+```
 
 ## From local file
 
@@ -21,16 +31,6 @@ rbxmSuite.launch("path/to.rbxm", {
 })
 ```
 
-## From GitHub
+# Building the project.
 
-```lua
-local rbxmSuite = loadstring(game:HttpGetAsync("https://github.com/richie0866/rbxm-suite/releases/latest/download/rbxm-suite.lua"))()
-
-local path = rbxmSuite.download("7n7o/r-term@latest", "CLI.rbxm")
--- Download the latest RBXM
-rbxmSuite.launch(path, {
-    runscripts=true,
-    deferred = true,
-    nocirculardeps = true
-})
-```
+Install rojo 7+ and run `rojo build -o CLI.rbxm`
