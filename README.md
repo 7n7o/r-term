@@ -2,7 +2,7 @@
 
 # Building the project.
 
-Install rojo 7+ and run `rojo build -o CLI.exe`
+Install rojo 7+ and run `rojo build -o CLI.rbxm`
 
 # Running the project.
 
