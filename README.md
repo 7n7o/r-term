@@ -6,7 +6,8 @@ Install rojo 7+ and run `rojo build -o CLI.rbxm`
 
 # Running the project.
 
-To run the project you can use this script
+## From local file
+
 ```lua
 local rbxmSuite = loadstring(game:HttpGetAsync("https://github.com/richie0866/rbxm-suite/releases/latest/download/rbxm-suite.lua"))()
 
@@ -17,5 +18,19 @@ rbxmSuite.launch("path/to.rbxm", {
 	nocirculardeps = true,
 	debug = false,
 	verbose = false,
+})
+```
+
+## From GitHub
+
+```lua
+local rbxmSuite = loadstring(game:HttpGetAsync("https://github.com/richie0866/rbxm-suite/releases/latest/download/rbxm-suite.lua"))()
+
+local path = rbxmSuite.download("7n7o/r-term@latest", "CLI.rbxm")
+-- Download the latest RBXM
+rbxmSuite.launch(path, {
+    runscripts=true,
+    deferred = true,
+    nocirculardeps = true
 })
 ```
